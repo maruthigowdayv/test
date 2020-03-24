@@ -332,7 +332,7 @@ Proceed to import data...
 
 <div class="section-body-data">
 <table>
-<tr><th>Account</th><th>Account Short Name</th><th>Transaction Number</th><th>Trade Date</th><th>Settlement Date</th><th>Maturity Date</th><th>BBG Unique</th><th>ISIN</th><th>Ticker</th><th>Security Name</th><th>Instrument Type</th><th>Security Type</th><th>Code Place</th><th>Place RL</th><th>Nom CTRP</th><th>Code BO</th><th>Side BS</th><th>Quantity</th><th>Price</th><th>Quotation Currency</th><th>Accrued Interest</th><th>Payment Amount</th><th>Current Value QC</th><th>Settlement Currency</th><th>Gross Amount</th><th>CRSDEVMNT</th><th>Log in BBG</th><th>Code PTFGP3</th></tr>
+<tr><th title="Treatment Date">Date</th><th title="Network Interface">Interface</th><th title="Fund Number">Fund</th><th title="Deal ID">Deal ID</th><th title="Caturm Value">Caturm</th><th title="Code Value Source">Code Source</th><th title="Code Value Result">Code Result</th><th title="Operation Type">OP Type</th><th title="Type MAJ JOU">Type MAJ JOU</th><th title="Transaction Quantity">Quantity</th><th title="Date of Effective">DOE</th><th title="Date of Value">DOV</th><th title="Negotiable Currency">Nego CCY</th><th title="Regular Currency">Reg CCY</th><th title="Cource DC vs DN">CCY FX</th><th title="Total Amount">Amount</th><th title="Lib OB">Lib OB</th><th title="Code Extension">Code Extension</th><th title="Internal Reference">INT REF</th><th title="Transaction Status">Status</th></tr>
 </table>
 </div>
 
@@ -372,7 +372,7 @@ function upload_evt_1(evt) {
 						console.log(data)
 						if (data && data.length > 0) {
 							for (var j = 1; j < data.length; j++) {
-								$('section#control-reports .section-body-data tr:eq(0)').after('<tr><td>'+data[j][2].replace(', Account','')+'</td><td>'+data[j][4]+'</td><td>'+data[j][5]+'</td><td>'+data[j][8]+'</td><td>'+data[j][10]+'</td><td>'+data[j][11]+'</td><td>'+data[j][12]+'</td><td>'+data[j][13]+'</td><td>'+data[j][14]+'</td><td>'+data[j][15]+'</td><td>'+data[j][17]+'</td><td>'+data[j][18]+'</td><td>'+data[j][19]+'</td><td>'+data[j][20]+'</td><td>'+data[j][23]+'</td><td>'+data[j][24]+'</td><td>'+data[j][25]+'</td><td>'+data[j][27]+'</td><td>'+data[j][28]+'</td><td>'+data[j][29]+'</td><td>'+data[j][30]+'</td><td>'+data[j][31]+'</td><td>'+data[j][32]+'</td><td>'+data[j][36]+'</td><td>'+data[j][47]+'</td><td>'+data[j][48]+'</td></tr>');
+								$('section#control-reports .section-body-data tr:eq(0)').after('<tr><td>'+data[j][7]+'</td><td>'+data[j][0]+'</td><td>'+data[j][1]+'</td><td>'+data[j][2]+'</td><td>'+data[j][3]+'</td><td>'+data[j][5]+'</td><td>'+data[j][6]+'</td><td>'+data[j][8]+'</td><td>'+data[j][10]+'</td><td>'+data[j][11]+'</td><td>'+data[j][12]+'</td><td>'+data[j][13]+'</td><td>'+data[j][16]+'</td><td>'+data[j][17]+'</td><td>'+data[j][20]+'</td><td>'+data[j][29]+'</td><td>'+data[j][35]+'</td><td>'+data[j][37]+'</td><td>'+data[j][38]+'</td><td>'+data[j][39]+'</td><td>'+data[j][40]+'</td>');
 							}
 						} else {
 							alert('Audit Assistant says...\n\nSkipping "'+file.name+'" file because it has no data.');
